@@ -120,7 +120,7 @@
                     "pane":
                         "<div class='tab-pane' id='images-upload'>" +
                           "<form action='' method='post' class='image-upload-form' enctype='multipart/form-data'>" +
-                            "<input type='file' name='asset[asset]' />" +
+                            "<input type='file' name='upload[file]' />" +
                             "<iframe class='hidden' name='upload-iframe' src='' style='display:none;''>" +
                             "</iframe>"+
                             "<div class='progress progress-striped active' style='display:none;'><div class='bar' style='width: 100%;'></div></div>" +
