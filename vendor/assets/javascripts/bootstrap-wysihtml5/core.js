@@ -480,7 +480,7 @@
                 "div": 1
             }
         },
-        stylesheets: [],
+        stylesheets: ['/static_assets/wysiwyg-color.css'],
         locale: "en"
     };
 
