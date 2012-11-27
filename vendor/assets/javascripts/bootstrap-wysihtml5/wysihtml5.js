@@ -7378,6 +7378,7 @@ wysihtml5.Commands = Base.extend(
      *    wysihtml5.commands.insertImage.exec(composer, "insertImage", { src: "http://www.google.de/logo.jpg", title: "foo" });
      */
     exec: function(composer, command, value) {
+      composer.focus()
       value = typeof(value) === "object" ? value : { src: value };
 
       var doc     = composer.doc,
