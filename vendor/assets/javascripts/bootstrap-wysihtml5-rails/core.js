@@ -121,9 +121,8 @@
                         "<div class='tab-pane' id='images-upload'>" +
                           "<form action='' method='post' class='image-upload-form' enctype='multipart/form-data'>" +
                             "<input type='file' name='upload[file]' />" +
-                            "<iframe class='hidden' name='upload-iframe' src='' style='display:none;''>" +
-                            "</iframe>"+
-                            "<div class='progress progress-striped active' style='display:none;'><div class='bar' style='width: 100%;'></div></div>" +
+                            "<div class='progress progress-striped active hidden'><div class='bar'></div></div>" +
+                            "<button type='submit' class='btn btn-primary'>Upload</button>" +
                           "</form>" +
                         "</div>"
                 }
@@ -140,6 +139,7 @@
 
     var Wysihtml5 = function(el, options) {
         this.el = el;
+        this.options = options
         this.toolbar = this.createToolbar(el, options || defaultOptions);
         this.editor =  this.createEditor(options);
 
