@@ -110,8 +110,8 @@
                         "<li><a href='#images-select' data-toggle='tab'>" + locale.image.select + "</a></li>",
                     "pane":
                         "<div class='tab-pane' id='images-select'>" +
-                          "<table class='table table-condensed table-bordered table-hover pointer' id='images-list'>" +
-                          "</table>" +
+                          "<ul class='thumbnails' id='images-list'>" +
+                          "</ul>" +
                         "</div>"
                 },
                 "upload": {
@@ -258,10 +258,10 @@
                 var items = [];
                 for (var key in data) {
                     if (data.hasOwnProperty(key)) {
-                        items.push("<tr class='image-url pointer' data-image-url='" + data[key].url + "'><td>" + data[key].name + "</td></tr>");
+                        items.push("<li class='span1'><div class='thumbnail'><img class='image-url pointer' data-image-url='" + data[key].file.url + "' src='" + data[key].file.url +"'></div></li>");
                     }
                 }
-                $("#images-list").html(items.join())
+                $("#images-list").html(items.join(''))
                 $('.image-url').on('click', function() {
                     var modal = $('.bootstrap-wysihtml5-insert-image-modal');
                     var url = $(this).data('image-url');
