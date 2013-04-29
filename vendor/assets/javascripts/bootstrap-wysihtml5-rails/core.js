@@ -60,7 +60,7 @@
                     "<div class='modal-header'>" +
                       "<a class='close' data-dismiss='modal'>&times;</a>" +
                       "<ul class='nav nav-tabs'>"+
-                        "<li><a href='#images-insert' data-toggle='tab'>" + locale.image.insert + "</a></li>" +
+                        "<li class='active'><a href='#images-insert' data-toggle='tab'>" + locale.image.insert + "</a></li>" +
                       "</ul>" +
                     "</div>" +
                     "<div class='modal-body'>" +
@@ -258,7 +258,7 @@
                 var items = [];
                 for (var key in data) {
                     if (data.hasOwnProperty(key)) {
-                        items.push("<li class='span1'><div class='thumbnail'><img class='image-url pointer' data-image-url='" + data[key].file.url + "' src='" + data[key].file.url +"'></div></li>");
+                        items.push("<li class='span1'><div class='thumbnail'><img class='image-url pointer' data-image-url='" + data[key].file.url + "' src='" + data[key].file.thumb.url +"'></div></li>");
                     }
                 }
                 $("#images-list").html(items.join(''))
